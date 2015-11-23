@@ -24,13 +24,6 @@ var myApp = angular.module('myApp', ['ui.router'])
   $scope.introduction = 'Hello, my name is Huy Nguyen'
 })
 
-// Content controller: define $scope.url as a json object
-.controller('ProjectController', function($scope, $http){
-  $http.get('data/data.json').success(function(response){
-    $scope.ProjectController = response
-  });
-})
-
 // .controller('ProjectController', function($scope, $http) {
 //     $http.get('data/data.json')
 //         .then(function(dat) {
