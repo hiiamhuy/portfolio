@@ -29,10 +29,7 @@ var myApp = angular.module('myApp', ['ui.router'])
     $http.get('data/data.json')
         .then(function(dat) {
             $scope.data = dat.data;
-            console.log(data)
-            console.log(dat)
-            console.log('data')
-            console.log('dat')
+            console.log($scope.data);
         });
 })
 
