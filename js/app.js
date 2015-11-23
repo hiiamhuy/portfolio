@@ -24,15 +24,15 @@ var myApp = angular.module('myApp', ['ui.router'])
   $scope.introduction = 'Hello, my name is Huy Nguyen'
 })
 
-// About page controller: define $scope.about as a string
-.controller('AboutController', function($scope){
-  $scope.about = "Here's some information about this page."
-})
-
 // Content controller: define $scope.url as a json object
 .controller('ProjectController', function($scope, $http) {
     $http.get('data/data.json')
         .then(function(dat) {
             $scope.data = dat.data;
         });
+})
+
+// About page controller: define $scope.about as a string
+.controller('AboutController', function($scope){
+  $scope.about = "Here's some information about this page."
 })

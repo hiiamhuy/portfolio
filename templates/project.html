@@ -1,11 +1,11 @@
 <div class="container">
-    <div class="row" ng-repeat="project in data">
-        <div class="col-sm-4" ng-style="{ 'background-image' : 'url(' + project.image + ')', 'background-size' : 'cover', 'min-height' : '300px', 'padding' : '2px'}"></div>
-        
-        <div class="col-sm-8">
-            <h2><a target="_blank" href="{{project.url}}">{{project.name}}</a></h2>
+    <div class="row" ng-repeat="dat in data">
+        <div class="col-sm-4">
+            <h2>
+            <img ng-src="{{dat.url}}" alt="{{dat.name}}" />
+           <!-- <a target="_blank" href="{{project.url}}">{{project.name}}</a></h2> -->
             <hr>
-            <p>{{project.desc}}</p>
+            <p>{{dat.desc}}</p>
         </div>
     </div>
 </div>
