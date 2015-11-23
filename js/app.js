@@ -31,6 +31,7 @@ var myApp = angular.module('myApp', ['ui.router'])
         .then(function(dat) {
             $scope.data = dat.data;
         });
+        console.log('project2')
 })
 
 // About page controller: define $scope.about as a string
