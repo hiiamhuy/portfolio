@@ -1,13 +1,39 @@
-// Create app
+var myApp = angular.module('myApp', ['ui.router'])
+// Config route provider
+.config(function($stateProvider) {
+    $stateProvider
+  .state('home', {
+    url:'/',
+    templateUrl: 'templates/home.html',
+    controller: 'HomeController',
+  })
+  .state('project', {
+    url:'/project',
+    templateUrl: 'templates/project.html',
+    controller: 'ProjectController',
+  })
+  .state('about', {
+    url:'/about',
+    templateUrl: 'templates/about.html',
+    controller: 'AboutController',
+  })
+})
 
-// Configure app
-
-// Landing page controller: define $scope.number as a number
-
+// Landing page controller: define $scope.introduction as a introduction
+.controller('HomeController', function($scope){
+  $scope.introduction = 'Hello, my name is Huy Nguyen'
+})
 
 // About page controller: define $scope.about as a string
-
+.controller('AboutController', function($scope){
+  $scope.about = "Here's some information about this page."
+})
 
 // Content controller: define $scope.url as an image
-
-
+.controller('ProjectController', function($scope, $http) {
+    $http.get('data/data.json')
+        .then(function(dat) {
+            $scope.data = dat.data;
+                        console.log($scope.data);
+        });
+})
