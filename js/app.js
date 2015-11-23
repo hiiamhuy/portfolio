@@ -26,12 +26,14 @@ var myApp = angular.module('myApp', ['ui.router'])
 
 // Content controller: define $scope.url as a json object
 .controller('ProjectController', function($scope, $http) {
-  console.log('project')
     $http.get('data/data.json')
         .then(function(dat) {
             $scope.data = dat.data;
+            console.log(data)
+            console.log(dat)
+            console.log('data')
+            console.log('dat')
         });
-        console.log('project2')
 })
 
 // About page controller: define $scope.about as a string
