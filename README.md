@@ -1,6 +1,7 @@
 # portfolio
 
 What is the URL of this project on your student web-server?
+http://students.washington.edu/hiiamhuy/info343/portfolio/
 
 Did you receive help from any other sources (classmates, etc.)? If so, please list who.
 Daniel
