@@ -3,7 +3,7 @@
 What is the URL of this project on your student web-server?
 
 Did you receive help from any other sources (classmates, etc.)? If so, please list who.
-Danial
+Daniel
 
 Approximately how many hours did it take you to complete this challenge? 12
 

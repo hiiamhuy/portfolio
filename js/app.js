@@ -29,7 +29,7 @@ var myApp = angular.module('myApp', ['ui.router'])
   $scope.about = "Here's some information about this page."
 })
 
-// Content controller: define $scope.url as an image
+// Content controller: define $scope.url as a json object
 .controller('ProjectController', function($scope, $http) {
     $http.get('data/data.json')
         .then(function(dat) {
