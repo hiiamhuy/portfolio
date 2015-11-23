@@ -25,13 +25,19 @@ var myApp = angular.module('myApp', ['ui.router'])
 })
 
 // Content controller: define $scope.url as a json object
-.controller('ProjectController', function($scope, $http) {
-    $http.get('data/data.json')
-        .then(function(dat) {
-            $scope.ProjectController = dat.data;
-            console.log($scope.ProjectController);
-        });
+.controller('ProjectController', function($scope, $http){
+  $http.get('data/data.json').success(function(response){
+    $scope.ProjectController = response
+  });
 })
+
+// .controller('ProjectController', function($scope, $http) {
+//     $http.get('data/data.json')
+//         .then(function(dat) {
+//             $scope.ProjectController = dat.data;
+//             console.log($scope.ProjectController);
+//         });
+// })
 
 // About page controller: define $scope.about as a string
 .controller('AboutController', function($scope){
